@@ -1,5 +1,6 @@
 add_place = function(){
     let input = document.getElementById('local_search_input');
+    input.setAttribute('placeholder', '请输入要搜索的文章');
     if(sessionStorage.getItem('input_info')){
       input.value = sessionStorage.getItem('input_info');
     }

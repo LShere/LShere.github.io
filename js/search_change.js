@@ -11,10 +11,13 @@ min_place = function(){
     input.setAttribute('placeholder', '');
     if(input.value != ''){
       sessionStorage.setItem('input_info', input.value);
-      input.value = '';
     }
 
-    $('#local-search-result').hide();
+    setTimeout(() => {
+      $('#local-search-result').hide();
+      input.value = '';
+    }, 500);
+
 }  
 
 var searchFunc = function(path, search_id, content_id, $) {

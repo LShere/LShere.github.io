@@ -16,7 +16,7 @@ min_place = function(){
     $('#local-search-result').hide();
 }  
 
-var searchFunc = function(path, search_id, content_id) {
+var searchFunc = function(path, search_id, content_id, $) {
   'use strict'; //使用严格模式
   $.ajax({
       url: path,
@@ -101,4 +101,4 @@ var searchFunc = function(path, search_id, content_id) {
   })
 };
 var path = "/search.xml";
-searchFunc(path, 'local_search_input', 'local-search-result');
+searchFunc(path, 'local_search_input', 'local-search-result', $);

@@ -7,7 +7,7 @@
     /* visibility: hidden; */
 }
 /* 移动端不显示播放控件 */
-@media only screen and (max-width: 380px){
+@media only screen and (max-width: 420px){
     .player-box{
         display: none;
     }

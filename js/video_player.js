@@ -10,7 +10,8 @@
 //     console.log(window.frames[0].document);
 //     //跨域iframe无法修改样式
 // }
-window.onload = function(){
+//引入的script不能有两个window.onload否则会发生冲突，
+// window.onload = function(){
     let toggle = false;
     const btn = $('.player-btn');
     const box = $('.player-box');
@@ -27,4 +28,4 @@ window.onload = function(){
     })
       
     
-}
+// }

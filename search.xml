@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>github图床</title>
+      <link href="/2019/11/02/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/"/>
+      <url>/2019/11/02/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://github.com/LShere/imageBed/blob/master/512aaf988f34bf12b36785120a1705b0.jpg?raw=true" alt="测试图片"></p><p>将在github上新建一个库，当作图床，可以使用<strong>picGo</strong>或者<strong>手动创建本地文件夹与git仓库关联</strong>的方法达到目的，使用时</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![]() //在（）中加入github中图片的url即可</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 图床 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MarkDown常见语法</title>
       <link href="/2019/10/29/MarkDown%E5%B8%B8%E8%A7%81%E8%AF%AD%E6%B3%95/"/>
       <url>/2019/10/29/MarkDown%E5%B8%B8%E8%A7%81%E8%AF%AD%E6%B3%95/</url>

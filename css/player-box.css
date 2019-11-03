@@ -4,6 +4,7 @@
     position: absolute;
     right: 1%;
     top: 100px;
+    transition: all .4s ease-in-out;
     /* visibility: hidden; */
 }
 /* 移动端不显示播放控件 */
@@ -69,14 +70,43 @@
 }
 .player-box iframe{
     visibility: hidden;
-    height: 0;
-    width: 100%;
-    transition: all .2s linear;
+    transform-origin: 100% 0%;
+    transform: scale(0, 0);
+    overflow: hidden;
 }
 .btn-active iframe{
     visibility: visible;
-    height: 100%;
-    
+    animation: active .4s ease-in-out;
+    transform: scale(1, 1);   
 }
+.btn-hide iframe{
+    visibility: visible;
+    animation: cancle .4s ease-in-out; 
+}
+@keyframes cancle{
+    0% {
+        transform: scale(1 ,1);
+    }
+    70% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(0, 0);
+        /* display: none; */
+    }
+}
+@keyframes active{
+    0% {
+        transform: scale(0 ,0);
+    }
+    70% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
 
 

@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>animation动画重复播放思路</title>
+      <link href="/2019/11/03/animation%E5%8A%A8%E7%94%BB%E9%87%8D%E5%A4%8D%E6%92%AD%E6%94%BE%E6%80%9D%E8%B7%AF/"/>
+      <url>/2019/11/03/animation%E5%8A%A8%E7%94%BB%E9%87%8D%E5%A4%8D%E6%92%AD%E6%94%BE%E6%80%9D%E8%B7%AF/</url>
+      
+        <content type="html"><![CDATA[<h3 id="步骤1"><a href="#步骤1" class="headerlink" title="步骤1"></a>步骤1</h3><p>给css中所需元素设置点击时的类，并规定点击时出现的样式和animation，<strong>注:</strong>两个<code>@keyframe</code>样式相反（ps: 原来试过使用同一个keyframe但不起作用，有什么更好的建议欢迎issue）</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.player-box</span> <span class="selector-tag">iframe</span>&#123;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden; <span class="comment">/*为了不让iframe中内容溢出，要设置成visibility: hidden, 之后在js文件动态改变这个属性*/</span></span><br><span class="line">    <span class="attribute">transform-origin</span>: <span class="number">100%</span> <span class="number">0%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0, 0);</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.btn-active</span> <span class="selector-tag">iframe</span>&#123;</span><br><span class="line">    <span class="attribute">visibility</span>: visible;</span><br><span class="line">    <span class="attribute">animation</span>: active .<span class="number">4s</span> ease-in-out;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1, 1);   </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.btn-hide</span> <span class="selector-tag">iframe</span>&#123;</span><br><span class="line">    <span class="attribute">visibility</span>: visible;</span><br><span class="line">    <span class="attribute">animation</span>: cancle .<span class="number">4s</span> ease-in-out; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="步骤2"><a href="#步骤2" class="headerlink" title="步骤2"></a>步骤2</h3><p>在jq或者js中动态获取dom，小程序或vue使用<code>wx-if</code>或<code>v-if</code>来动态控制要添加、删除的类，通过事件机制监听添加删除类的时机即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> jq </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js中各种宽高概念位置总结</title>
+      <link href="/2019/11/03/js%E4%B8%AD%E5%90%84%E7%A7%8D%E5%AE%BD%E9%AB%98%E6%A6%82%E5%BF%B5/"/>
+      <url>/2019/11/03/js%E4%B8%AD%E5%90%84%E7%A7%8D%E5%AE%BD%E9%AB%98%E6%A6%82%E5%BF%B5/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>懒得写了，这篇总结的不错<a href="https://www.cnblogs.com/myzhibie/p/4256164.html" target="_blank" rel="noopener">https://www.cnblogs.com/myzhibie/p/4256164.html</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gitee图床</title>
       <link href="/2019/11/02/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/"/>
       <url>/2019/11/02/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>

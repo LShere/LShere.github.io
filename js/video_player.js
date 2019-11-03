@@ -15,17 +15,30 @@
     let toggle = false;
     const btn = $('.player-btn');
     const box = $('.player-box');
+    const player = $('#video_player');
+    // const width = box.width();
+    // console.log(width, "width");
+    // player.width(width);
     btn.click(function(){
         if(!toggle){
+            // player.stop();
             toggle = true;
             btn.addClass('btn-active');
-            box.addClass('btn-active');
+            box.addClass('btn-active').removeClass('btn-hide');
+            player.css({
+                'visibility': 'visible'
+            })
         }else{
+            // player.stop();
             toggle = false;
             btn.removeClass('btn-active');
-            box.removeClass('btn-active');
+            box.addClass('btn-hide').removeClass('btn-active');
+            setTimeout(() => {
+                player.css({
+                    'visibility': 'hidden'
+                })
+            }, 500);
         }
     })
       
     
-// }

@@ -19,6 +19,11 @@
     // const width = box.width();
     // console.log(width, "width");
     // player.width(width);
+
+    // delayScrollFunc(fn, delay){
+    //     const now = new Date().getTime();
+
+    // }
     btn.click(function(){
         if(!toggle){
             // player.stop();
@@ -39,6 +44,58 @@
                 })
             }, 500);
         }
+    })
+    // $(window).scroll(function(){
+    //     let timer;
+    //     let startTime = new Date();
+    //     return function(){
+    //         let curTime = new Date();
+    //         if(curTime - startTime >= 2000){
+    //             setTimeout(() => {
+    //                 console.log($(document).scrollTop(), "top");   
+    //             }, 500);
+    //             startTime = curTime;
+    //         }
+    //     }
+    // })
+    //节流函数
+    function throttle(fn, wait){
+        var lastTime = 0, timeout;
+        return function(){
+            var context = this,
+            args = arguments,
+            delay = wait || 100,
+            now = new Date().getTime();
+            if(now - lastTime <= delay){
+                return;
+            }
+            lastTime = now;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                timeout = null;
+                fn.apply(context, args);
+            }, delay);
+
+        }
+    }
+    //隐藏显示播放按钮
+    function showOrHideBtn(){
+        // console.log($(document).scrollTop(), 'top');
+        let introHeight = $('#cxo-intro').height();
+        let scrollTop = $(document).scrollTop();
+        if(scrollTop > introHeight){
+            btn.addClass('hide-btn')
+                .removeClass('show-btn');
+        }else{
+            if(btn.hasClass('hide-btn')){
+                btn.removeClass('hide-btn')
+                    .addClass('show-btn');
+            }
+        }
+    }
+    window.addEventListener('scroll', function(){
+        throttle(showOrHideBtn, 200)();
+        // this.console.log($(this.document).scrollTop())
     })
       
     
